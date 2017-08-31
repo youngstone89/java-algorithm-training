@@ -18,15 +18,10 @@ public class GetMinSum {
 	public int getMinSum(int[] A, int[] B) {
 		int answer = 0;
 		Arrays.sort(A);
-		int temp;
-		for (int i = 0; i < B.length / 2; i++) {
-			temp = B[i];
-			B[i] = B[(B.length - 1) - i];
-			B[(B.length - 1) - i] = temp;
-		}
+		Arrays.sort(B);
 
 		for (int i = 0; i < A.length; i++) {
-			answer+=A[i]*B[i];
+			answer+=A[i]*B[A.length-1-i];
 		}
 		
 		
