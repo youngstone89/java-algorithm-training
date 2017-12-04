@@ -19,18 +19,33 @@ v	result
 
 package DemoTest;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class DemoTest3 {
 
+	public int[] solution(int[][] board) {
+
+		int[] answer = new int[6];
+		int index=0;
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board[i].length; j++) {
+				answer[index++]=board[i][j];
+				
+			}
+		}
+		Arrays.sort(answer);
+		
 	
-	public int solution(int [][]board)
-    {
-        int answer = 1234;
+		
+		return answer;
+	}
 
-        return answer;
-    }
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		int[][] board = { { 1, 4 }, { 3, 4 }, { 3, 10 } };
+		DemoTest3 dm = new DemoTest3();
+		System.out.println(dm.solution(board));
 	}
 
 }
