@@ -4,6 +4,7 @@ public class BubbleSort {
 
 	public static void main(String[] args) {
 		int E[]= new int [100];
+		
 		for (int i = 0; i < E.length; i++) {
 			E[i]=(int)(Math.random()*100);
 			
