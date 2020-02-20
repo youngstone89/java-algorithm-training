@@ -17,12 +17,39 @@ public class TwoSum {
 		int target =9;
 		
 		int [] arr = new int [2];
+
+		arr = findIndices(given_nums,target);
 		
-		arr = twoSum(given_nums, target);
+//		arr = twoSum(given_nums, target);
 
 		System.out.println(arr[0]+""+arr[1]);
 		
 		
+	}
+
+	public static int[] findIndices(int[] nums, int target){
+
+		int [] indices_arr = new int [2];
+
+		for (int i = 0; i < nums.length; i++) {
+
+			for (int j = i+1; j < nums.length; j++) {
+
+				int outer_var = nums[i];
+				int inner_var = nums[j];
+				int compare_var = outer_var + inner_var;
+				if(compare_var == target){
+					indices_arr[0] = i;
+					indices_arr[1] = j;
+					return indices_arr;
+				}
+
+			}
+
+		}
+
+		return indices_arr;
+
 	}
 	
 	
