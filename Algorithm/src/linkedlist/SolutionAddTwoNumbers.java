@@ -52,7 +52,7 @@ public class SolutionAddTwoNumbers {
             curr.next = new ListNode(sum % 10);
             curr = curr.next;
             if (p != null) p = p.next;
-            if (q != null) q = q.next;7
+            if (q != null) q = q.next;
         }
         if (carry > 0) {
             curr.next = new ListNode(carry);
